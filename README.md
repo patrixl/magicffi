@@ -29,6 +29,14 @@ The following system packages are also required:
 
 You have to install them on your system before loading magicffi.
 
+### macOS notes
+
+On macOS, assuming Homebrew is installed, you'll also need to install the `libmagic` package.
+
+And while I'm sure there's a better way, then you need to symlink `libmagic.dylib` to `libmagic.so`:
+
+   ln -s $(brew --prefix)/lib/libmagic.dylib $(brew --prefix)/lib/libmagic.so
+
 Tutorial
 --------
 

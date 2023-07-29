@@ -19,6 +19,13 @@
                                            #+linux "/usr/include/linux"
                                            ;; FIXME: It is here on ubuntu 16.04.
                                            ;; Verify this on other OSes
+                                   ;; Here we assume homebrew, which installs
+                                   ;; libmagic either in /opt/homebrew on AS
+                                   ;; or in /usr/local on x86_64
+                                   #+darwin "-I/opt/homebrew/include"
+                                   #+darwin "-I/usr/local/include"
+                                   #+darwin "-L/opt/homebrew/lib"
+                                   #+darwin "-L/usr/local/lib"
                                    "-I/usr/include"
                                    "-I/usr/local/include")
                                   )
